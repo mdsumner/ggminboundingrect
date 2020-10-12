@@ -13,7 +13,7 @@ bounding rectangle.
 ## Installation
 
 You can install ggminboundingrect from
-[CRAN](https://github.com/mdsumner/ggminboundingrect) with:
+[GitHub](https://github.com/mdsumner/ggminboundingrect) with:
 
 ``` r
 remotes::install_github("mdsumner/ggminboundingrect")
@@ -72,7 +72,7 @@ ggplot(d,aes(x, y, group = sfg_id, colour = factor(sfg_id))) + stat_mbr(geom = "
 
 <img src="man/figures/README-stat-1.png" width="100%" />
 
-## Ackknowledgements
+## Acknowledgements
 
 Thanks to Thomas Pedersen for the awesome ggplot2-extending guide
 (<https://ggplot2-book.org/spring1.html>).
