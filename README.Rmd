@@ -41,7 +41,13 @@ library(ggminboundingrect)
 library(ggplot2)
 ggplot(data.frame(x = rnorm(500), y = rnorm(500), group = rep(1:50, each = 10)), aes(x, y, group = group))  + geom_mbr()
 
+```
 
+
+
+Some sf examples, by decomposing to data frame (known as 'fortify' in old ggplot2 circles ). 
+
+```{r sf-mbr}
 ## bounds on the feature
 d <- sfheaders::sf_to_df(silicate::inlandwaters)
 ggplot(d,aes(x, y, group = sfg_id)) + geom_mbr()
@@ -67,9 +73,9 @@ ggplot(d,aes(x, y, group = sfg_id, colour = factor(sfg_id))) + stat_mbr(geom = "
 ```
 
 
-## Ackknowledgements
+## Acknowledgements
 
-Thanks to Thomas Pedersen for awesome ggplot2-exteding guides (https://ggplot2-book.org/spring1.html). 
+Thanks to Thomas Pedersen for the awesome ggplot2-extending guide (https://ggplot2-book.org/spring1.html). 
 
 Thanks to Mike FC for inspiration. 
 

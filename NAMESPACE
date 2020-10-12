@@ -2,5 +2,7 @@
 
 export(geom_mbr)
 export(stat_mbr)
+importFrom(ggplot2,GeomPath)
 importFrom(ggplot2,Stat)
 importFrom(ggplot2,ggproto)
+importFrom(ggplot2,layer)

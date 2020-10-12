@@ -33,15 +33,16 @@ ggplot(data.frame(x = rnorm(500), y = rnorm(500), group = rep(1:50, each = 10)),
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
+Some sf examples, by decomposing to data frame (known as ‘fortify’ in
+old ggplot2 circles ).
+
 ``` r
-
-
 ## bounds on the feature
 d <- sfheaders::sf_to_df(silicate::inlandwaters)
 ggplot(d,aes(x, y, group = sfg_id)) + geom_mbr()
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+<img src="man/figures/README-sf-mbr-1.png" width="100%" />
 
 ``` r
 
@@ -51,7 +52,7 @@ d <- sfheaders::sf_to_df(silicate::inlandwaters)
 ggplot(d,aes(x, y, group = paste(sfg_id, polygon_id))) + geom_mbr()
 ```
 
-<img src="man/figures/README-example-3.png" width="100%" />
+<img src="man/figures/README-sf-mbr-2.png" width="100%" />
 
 ``` r
 
@@ -61,7 +62,7 @@ d <- sfheaders::sf_to_df(silicate::inlandwaters)
 ggplot(d,aes(x, y, group = paste(polygon_id, linestring_id))) + geom_mbr()
 ```
 
-<img src="man/figures/README-example-4.png" width="100%" />
+<img src="man/figures/README-sf-mbr-3.png" width="100%" />
 
 Use `stat_mbr()` to avoid the default use of path geom drawing .
 
@@ -73,7 +74,7 @@ ggplot(d,aes(x, y, group = sfg_id, colour = factor(sfg_id))) + stat_mbr(geom = "
 
 ## Ackknowledgements
 
-Thanks to Thomas Pedersen for awesome ggplot2-exteding guides
+Thanks to Thomas Pedersen for the awesome ggplot2-extending guide
 (<https://ggplot2-book.org/spring1.html>).
 
 Thanks to Mike FC for inspiration.
