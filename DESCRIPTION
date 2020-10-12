@@ -13,3 +13,5 @@ Imports:
     ggplot2,
     mbr
 Remotes: mdsumner/mbr
+URL: https://github.com/mdsumner/ggminboundingrect
+BugReports: https://github.com/mdsumner/ggminboundingrect/issues
